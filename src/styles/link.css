@@ -1,0 +1,15 @@
+.link {
+  color: rgba(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover,
+.link:active {
+  text-decoration: underline;
+  color: rgb(109, 218, 88);
+}
+
+.imglink {
+  cursor: pointer;
+}
