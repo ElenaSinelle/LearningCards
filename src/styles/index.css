@@ -1,7 +1,11 @@
 @import "./fonts.css";
 
-body {
+* {
   margin: 0;
-  font: normal normal 16px/20px Lato, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font: 300 normal 16px/20px Lato, sans-serif;
   color: rgb(0, 0, 0);
 }

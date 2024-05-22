@@ -22,10 +22,13 @@ export default class Footer extends React.Component {
     return (
       <footer className="footer container">
         <Logo />
+
         <p className="copyRight">
           Copyright © 2001-2024 StudyStack LLC. All rights reserved.
         </p>
+
         <div className="line"></div>
+
         <nav>
           <ul>
             {navItems.map((item) => (
@@ -33,12 +36,32 @@ export default class Footer extends React.Component {
             ))}
           </ul>
         </nav>
+
+        <div class="footerBtns">
+          <div className="browseBtn">
+            <PlainLink
+              href="/"
+              contentsAdd="Browse on Search"
+              contents="millions of existing flashcards"
+            />
+          </div>
+
+          <div className="createBtn">
+            <PlainLink
+              href="/"
+              contentsAdd="Create Flashcards"
+              contents="plus a dozen other activities"
+            />
+          </div>
+        </div>
+
         <ImgLink
           className="playWare"
           href="https://www.playwire.com/contact-direct-sales"
           src={PlayWare}
           alt="PlayWare"
         />
+
         <PlainLink href="/" contents="Advertise on this site" />
       </footer>
     );
