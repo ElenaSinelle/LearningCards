@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/header.css";
 import Logo from "../Logo/Logo";
-import PlainLink from "../Link/PlainLink";
+import PlainLink from "../Links/PlainLink";
 import Search from "../Inputs/Search";
 
 export default class Header extends React.Component {

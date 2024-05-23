@@ -1,5 +1,5 @@
 import React from "react";
-import PlainLink from "../Link/PlainLink";
+import PlainLink from "../Links/PlainLink";
 
 export default function NavItem(props) {
   const { href, contents } = props;

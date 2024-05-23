@@ -1,5 +1,5 @@
 import "../../styles/inputs.css";
-import ImgLink from "../Link/ImgLink";
+import ImgLink from "../Links/ImgLink";
 
 export default function Search() {
   return (

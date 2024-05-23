@@ -2,9 +2,9 @@ import React from "react";
 import Logo from "../Logo/Logo";
 import PlayWare from "../../images/png/playwire.png";
 import NavItem from "./NavItem";
-import ImgLink from "../Link/ImgLink";
-import PlainLink from "../Link/PlainLink";
-import ButtonLink from "../Link/ButtonLink";
+import ImgLink from "../Links/ImgLink";
+import PlainLink from "../Links/PlainLink";
+import ButtonLink from "../Links/ButtonLink";
 import "../../styles/footer.css";
 import "../../styles/nav.css";
 
