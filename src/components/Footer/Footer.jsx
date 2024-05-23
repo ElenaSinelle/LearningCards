@@ -4,6 +4,7 @@ import PlayWare from "../../images/png/playwire.png";
 import NavItem from "./NavItem";
 import ImgLink from "../Link/ImgLink";
 import PlainLink from "../Link/PlainLink";
+import ButtonLink from "../Link/ButtonLink";
 import "../../styles/footer.css";
 import "../../styles/nav.css";
 
@@ -20,49 +21,47 @@ export default class Footer extends React.Component {
     ];
 
     return (
-      <footer className="footer container">
-        <Logo />
+      <footer className="footer">
+        <div className="container footerContainer">
+          <Logo />
 
-        <p className="copyRight">
-          Copyright © 2001-2024 StudyStack LLC. All rights reserved.
-        </p>
+          <p className="copyRight">
+            Copyright © 2001-2024 StudyStack LLC. All rights reserved.
+          </p>
 
-        <div className="line"></div>
+          <div className="line"></div>
 
-        <nav>
-          <ul>
-            {navItems.map((item) => (
-              <NavItem href={item[1]} contents={item[0]} />
-            ))}
-          </ul>
-        </nav>
+          <nav>
+            <ul>
+              {navItems.map((item) => (
+                <NavItem href={item[1]} contents={item[0]} />
+              ))}
+            </ul>
+          </nav>
 
-        <div class="footerBtns">
-          <div className="browseBtn">
-            <PlainLink
+          <div class="footerBtns">
+            <ButtonLink
               href="/"
               contentsAdd="Browse on Search"
               contents="millions of existing flashcards"
             />
-          </div>
 
-          <div className="createBtn">
-            <PlainLink
+            <ButtonLink
               href="/"
               contentsAdd="Create Flashcards"
               contents="plus a dozen other activities"
             />
           </div>
+
+          <ImgLink
+            className="playWare"
+            href="https://www.playwire.com/contact-direct-sales"
+            src={PlayWare}
+            alt="PlayWare"
+          />
+
+          <PlainLink href="/" contents="Advertise on this site" />
         </div>
-
-        <ImgLink
-          className="playWare"
-          href="https://www.playwire.com/contact-direct-sales"
-          src={PlayWare}
-          alt="PlayWare"
-        />
-
-        <PlainLink href="/" contents="Advertise on this site" />
       </footer>
     );
   }

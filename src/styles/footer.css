@@ -1,5 +1,8 @@
 .footer {
   background-color: rgb(29, 29, 29);
+}
+
+.footerContainer {
   color: rgb(255, 255, 255);
   padding-top: 5rem;
   padding-bottom: 8rem;
@@ -31,39 +34,4 @@
   justify-content: center;
   gap: 2rem;
   padding-top: 4.6rem;
-}
-
-.browseBtn,
-.createBtn {
-  padding: 0.7rem 1.5rem;
-  border: none;
-  border-radius: 0.25rem;
-  background-color: rgb(77, 160, 60);
-  cursor: pointer;
-}
-
-.browseBtn:hover,
-.createBtn:hover {
-  background-color: rgb(109, 218, 88);
-}
-
-.browseBtn .linkFirstLine,
-.createBtn .linkFirstLine,
-.browseBtn .linkSecondLine,
-.createBtn .linkSecondLine {
-  color: rgb(29, 29, 29);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-.browseBtn .linkFirstLine,
-.createBtn .linkFirstLine {
-  font-size: 1.2rem;
-}
-
-.browseBtn .linkSecondLine,
-.createBtn .linkSecondLine {
-  font-size: 0.75rem;
 }
