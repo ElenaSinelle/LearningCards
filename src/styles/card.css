@@ -1,0 +1,83 @@
+.card {
+  width: 30rem;
+  height: 20rem;
+  box-shadow: 0 0 7px #919191;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 7fr 1fr;
+  grid-template-areas:
+    "cardTitle"
+    "term"
+    "clickToFlip";
+}
+
+.cardTitle {
+  grid-area: cardTitle;
+  text-align: center;
+}
+
+.card .readCardBtn {
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  width: 1.2rem;
+  height: auto;
+}
+
+.term {
+  grid-area: term;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+#clickToFlip {
+  grid-area: clickToFlip;
+  color: rgb(29, 29, 29);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+/* cardBox styles */
+.cardBox {
+  height: 10rem;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.cardMini {
+  width: 14rem;
+  height: 10rem;
+  margin: 0 auto;
+}
+
+.cardMini .readCardBtn {
+  display: none;
+}
+
+.cardMini .cardTitle {
+  font-size: 0.8rem;
+}
+
+.cardMini .term {
+  font-size: 2rem;
+}
+
+.cardHolder {
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  bottom: -0.3rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  z-index: 200;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

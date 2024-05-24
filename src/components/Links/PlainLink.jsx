@@ -1,9 +1,9 @@
 import "../../styles/link.css";
 
 export default function PlainLink(props) {
-  const { href, contents = "" } = props;
+  const { href, contents = "", id = "" } = props;
   return (
-    <a className="link" href={href}>
+    <a id={id} className="link" href={href}>
       {contents}
     </a>
   );

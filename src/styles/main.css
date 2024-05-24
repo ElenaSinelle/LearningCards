@@ -3,4 +3,49 @@
 }
 
 .mainContainer {
+  background-color: rgb(255, 255, 255);
+  padding: 2rem 3rem;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.currentCardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardsBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.commandArea {
+  display: flex;
+  justify-content: space-between;
+}
+
+.commandAreaItem {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.commandArea .link {
+  color: rgb(29, 29, 29);
+  font-weight: 600;
+}
+
+.commandArea .link:hover {
+  text-decoration: underline;
+  color: rgb(109, 218, 88);
+}
+
+.timerContainer {
+  text-align: end;
 }
