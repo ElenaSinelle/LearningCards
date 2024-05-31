@@ -1,51 +1,49 @@
 .main {
   background-color: rgb(126, 131, 136);
 }
-
-.mainContainer {
+.main__wrapper {
   background-color: rgb(255, 255, 255);
   padding: 2rem 3rem;
 }
-
-.cardsContainer {
+.main__wrapper .cardsContainer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-
-.currentCardContainer {
+.main__wrapper .cardsContainer__currentCardContainer {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
-
-.cardsBox {
+.main__wrapper .cardsContainer__cardsBox {
   display: flex;
+  justify-content: center;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
 }
-
-.commandArea {
+.main__wrapper .commandArea {
   display: flex;
   justify-content: space-between;
 }
-
-.commandAreaItem {
+.main__wrapper .commandArea__commandAreaItem {
   flex: 1 1 auto;
   text-align: center;
 }
-
-.commandArea .link {
+.main__wrapper .commandArea__link {
   color: rgb(29, 29, 29);
   font-weight: 600;
 }
-
-.commandArea .link:hover {
+.main__wrapper .commandArea__link:hover {
   text-decoration: underline;
   color: rgb(109, 218, 88);
 }
-
-.timerContainer {
+.main__wrapper .timer {
   text-align: end;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem 10rem;
 }

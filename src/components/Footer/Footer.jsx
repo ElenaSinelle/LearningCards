@@ -5,64 +5,60 @@ import NavItem from "./NavItem";
 import ImgLink from "../Links/ImgLink";
 import PlainLink from "../Links/PlainLink";
 import ButtonLink from "../Links/ButtonLink";
-import "../../styles/footer.css";
-import "../../styles/nav.css";
+import styles from "./Footer.module.scss";
 
-export default class Footer extends React.Component {
-  render() {
-    const navItems = [
-      ["Home", "./."],
-      ["Flashcards", "./."],
-      ["About", "./."],
-      ["FAQ", "./."],
-      ["Terms of Service", "./."],
-      ["Privacy Statement", "./."],
-      ["Contact", "./."],
-    ];
+export default function Footer() {
+  const navItems = [
+    ["Home", "./."],
+    ["Flashcards", "./."],
+    ["About", "./."],
+    ["FAQ", "./."],
+    ["Terms of Service", "./."],
+    ["Privacy Statement", "./."],
+    ["Contact", "./."],
+  ];
 
-    return (
-      <footer className="footer">
-        <div className="container footerContainer">
-          <Logo />
+  return (
+    <footer className={styles.footer}>
+      <div className={`${styles.container} ${styles.footer__container}`}>
+        <Logo />
 
-          <p className="copyRight">
-            Copyright © 2001-2024 StudyStack LLC. All rights reserved.
-          </p>
+        <p className={styles.footer__copyRight}>
+          Copyright © 2001-2024 StudyStack LLC. All rights reserved.
+        </p>
 
-          <div className="line"></div>
+        <div className={styles.footer__line}></div>
 
-          <nav>
-            <ul>
-              {navItems.map((item) => (
-                <NavItem href={item[1]} contents={item[0]} />
-              ))}
-            </ul>
-          </nav>
+        <nav>
+          <ul className={styles.footer__nav}>
+            {navItems.map((item) => (
+              <NavItem href={item[1]} contents={item[0]} />
+            ))}
+          </ul>
+        </nav>
 
-          <div class="footerBtns">
-            <ButtonLink
-              href="/"
-              contentsAdd="Browse on Search"
-              contents="millions of existing flashcards"
-            />
-
-            <ButtonLink
-              href="/"
-              contentsAdd="Create Flashcards"
-              contents="plus a dozen other activities"
-            />
-          </div>
-
-          <ImgLink
-            className="playWare"
-            href="https://www.playwire.com/contact-direct-sales"
-            src={PlayWare}
-            alt="PlayWare"
+        <div class={styles.footer__btns}>
+          <ButtonLink
+            href="/"
+            contentsAdd="Browse on Search"
+            contents="millions of existing flashcards"
           />
 
-          <PlainLink href="/" contents="Advertise on this site" />
+          <ButtonLink
+            href="/"
+            contentsAdd="Create Flashcards"
+            contents="plus a dozen other activities"
+          />
         </div>
-      </footer>
-    );
-  }
+
+        <ImgLink
+          href="https://www.playwire.com/contact-direct-sales"
+          src={PlayWare}
+          alt="PlayWare"
+        />
+
+        <PlainLink href="/" contents="Advertise on this site" />
+      </div>
+    </footer>
+  );
 }

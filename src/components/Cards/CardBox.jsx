@@ -1,12 +1,11 @@
-import "../../styles/card.css";
-import Card from "./Card";
+import styles from "./CardBox.module.scss";
+import CardMini from "./CardMini";
 
-export default function CardBox(props) {
-  const { id, term, style, cardHolderContents } = props;
+export default function CardBox({ id, term, cardHolderContents, theme }) {
   return (
-    <div className="cardBox">
-      <Card className="card cardMini" id={id} term={term} />
-      <div className="cardHolder" style={style}>
+    <div className={styles.cardBox}>
+      <CardMini id={id} term={term} />
+      <div className={`${styles.cardBox__cardHolder} ${theme.bg}`}>
         {cardHolderContents}
       </div>
     </div>

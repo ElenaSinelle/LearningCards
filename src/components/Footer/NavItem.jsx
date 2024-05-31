@@ -1,10 +1,10 @@
 import React from "react";
 import PlainLink from "../Links/PlainLink";
+import styles from "./NavItem.module.scss";
 
-export default function NavItem(props) {
-  const { href, contents } = props;
+export default function NavItem({ href, contents }) {
   return (
-    <li className="navLink">
+    <li className={styles.navLink}>
       <PlainLink href={href} contents={contents} />
     </li>
   );

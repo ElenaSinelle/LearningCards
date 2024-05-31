@@ -1,4 +1,5 @@
-@import "./fonts.css";
+@import "./fonts.module.scss";
+@import "./variables.module.scss";
 
 * {
   margin: 0;
@@ -7,5 +8,5 @@
 
 body {
   font: 300 normal 16px/20px Lato, sans-serif;
-  color: rgb(0, 0, 0);
+  color: $darkFontColor;
 }

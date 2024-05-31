@@ -1,9 +1,13 @@
-import "../../styles/link.css";
+import styles from "./PlainLink.module.scss";
 
-export default function PlainLink(props) {
-  const { href, contents = "", id = "" } = props;
+export default function PlainLink({
+  href,
+  contents = "",
+  id = "",
+  className = "",
+}) {
   return (
-    <a id={id} className="link" href={href}>
+    <a id={id} className={`${styles.link} ${className}`} href={href}>
       {contents}
     </a>
   );

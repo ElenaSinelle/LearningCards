@@ -1,0 +1,52 @@
+@import "../../commonStyles/variables.module.scss";
+@import "../../commonStyles/mixins.module.scss";
+
+.main {
+  background-color: $grayBgColor;
+  &__wrapper {
+    background-color: $lightFontColor;
+    padding: 2rem 3rem;
+
+    .cardsContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      &__currentCardContainer {
+        @include flexAlignment;
+      }
+
+      &__cardsBox {
+        @include flexAlignment;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+    }
+
+    .commandArea {
+      display: flex;
+      justify-content: space-between;
+
+      &__commandAreaItem {
+        flex: 1 1 auto;
+        text-align: center;
+      }
+
+      &__link {
+        color: rgb(29, 29, 29);
+        font-weight: 600;
+      }
+
+      &__link:hover {
+        text-decoration: underline;
+        color: rgb(109, 218, 88);
+      }
+    }
+    .timer {
+      text-align: end;
+    }
+  }
+}
+.container {
+  @include container;
+}
