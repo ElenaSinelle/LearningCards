@@ -47,3 +47,7 @@
   margin: 0 auto;
   padding: 1rem 10rem;
 }
+
+.wordsContainer {
+  background-color: rgba(243, 144, 144, 0.5);
+}

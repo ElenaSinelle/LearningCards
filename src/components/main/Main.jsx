@@ -3,14 +3,15 @@ import styles from "./Main.module.scss";
 import PlainLink from "../Links/PlainLink";
 import Card from "../Cards/Card";
 import CardBox from "../Cards/CardBox";
+import Vocabulary from "../Vocabulary/Vocabulary";
 import themePink from "../../commonStyles/themes/themePink.module.scss";
 import themeBlue from "../../commonStyles/themes/themeBlue.module.scss";
 import themeGreen from "../../commonStyles/themes/themeGreen.module.scss";
 
-const terms = ["ups", "i", "did", "it", "again"];
-const themes = [themePink, themeBlue, themeGreen];
-
 export default function Main() {
+  const terms = ["ups", "i", "did", "it", "again"];
+  const themes = [themePink, themeBlue, themeGreen];
+
   return (
     <main className={styles.main}>
       <div className={styles.container}>
@@ -73,6 +74,9 @@ export default function Main() {
             </div>
 
             <div className={styles.timer}>timer</div>
+          </div>
+          <div className={styles.vocabulary}>
+            <Vocabulary />
           </div>
         </div>
       </div>

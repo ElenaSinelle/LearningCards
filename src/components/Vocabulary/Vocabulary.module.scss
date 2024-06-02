@@ -1,0 +1,52 @@
+@import "../../commonStyles/variables.module.scss";
+@import "../../commonStyles/mixins.module.scss";
+
+.vocab {
+  @include flexAlignment;
+  flex-direction: column;
+
+  &__title2,
+  &__title3 {
+    padding-bottom: 1rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    box-shadow: $box-shadow;
+  }
+
+  &__line {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1.3fr;
+    padding: 0.5rem;
+
+    &:nth-child(2n) {
+      background-color: rgba($grayBgColor, 0.1);
+    }
+
+    &:nth-child(2n + 1) {
+      background-color: rgba($grayBgColor, 0.3);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btnsContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.2rem;
+  }
+
+  &__btn {
+    outline: none;
+    padding: 0.3rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 0.2rem;
+  }
+}

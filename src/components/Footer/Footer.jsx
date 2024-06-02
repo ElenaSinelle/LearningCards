@@ -37,7 +37,7 @@ export default function Footer() {
           </ul>
         </nav>
 
-        <div class={styles.footer__btns}>
+        <div className={styles.footer__btns}>
           <ButtonLink
             href="/"
             contentsAdd="Browse on Search"

@@ -33,13 +33,13 @@
       }
 
       &__link {
-        color: rgb(29, 29, 29);
+        color: $darkBgColor;
         font-weight: 600;
       }
 
       &__link:hover {
         text-decoration: underline;
-        color: rgb(109, 218, 88);
+        color: $lightGreenFontColor;
       }
     }
     .timer {
@@ -49,4 +49,8 @@
 }
 .container {
   @include container;
+}
+
+.wordsContainer {
+  background-color: $themePink;
 }
