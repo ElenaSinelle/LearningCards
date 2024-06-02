@@ -28,18 +28,24 @@ export default function VocabItem({ word }) {
         />
       )}
       <div className={styles.vocab__btnsContainer}>
+        {editing ? (
+          <button
+            className={`${styles.vocab__btn} ${themes[1].bg}`}
+            onClick={() => setEditing(false)}
+          >
+            Save Word
+          </button>
+        ) : (
+          ""
+        )}
+
         <button
           className={`${styles.vocab__btn} ${themes[2].bg}`}
           onClick={() => setEditing(true)}
         >
           Edit Word
         </button>
-        <button
-          className={`${styles.vocab__btn} ${themes[1].bg}`}
-          onClick={() => setEditing(false)}
-        >
-          Save Word
-        </button>
+
         <button className={`${styles.vocab__btn} ${themes[0].bg}`}>
           Delete Word
         </button>
