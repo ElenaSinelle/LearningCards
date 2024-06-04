@@ -32,7 +32,7 @@ export default function Footer() {
         <nav>
           <ul className={styles.footer__nav}>
             {navItems.map((item) => (
-              <NavItem href={item[1]} contents={item[0]} />
+              <NavItem key={item[0]} href={item[1]} contents={item[0]} />
             ))}
           </ul>
         </nav>
