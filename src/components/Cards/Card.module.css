@@ -5,8 +5,8 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content 7fr 1fr;
-  grid-template-areas: "cardTitle" "term" "clickToFlip";
+  grid-template-rows: min-content 5fr 1fr 1.5fr;
+  grid-template-areas: "cardTitle" "term" "translation" "clickToFlip";
 }
 .card__cardTitle {
   grid-area: cardTitle;
@@ -27,12 +27,43 @@
   font-size: 3rem;
   font-weight: 600;
 }
+.card__showTranslation {
+  grid-area: translation;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  max-width: 60%;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  border: 1px solid rgb(77, 160, 60);
+  border-radius: 0.2rem;
+  background-color: rgb(109, 218, 88);
+  transition: all ease 0.5s;
+}
+.card__showTranslation:hover, .card__showTranslation:active {
+  transform: scale(0.97);
+}
+.card__translation {
+  grid-area: translation;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  max-width: 60%;
+  font-size: 1.2rem;
+}
 .card__clickToFlip {
   grid-area: clickToFlip;
-  color: rgb(29, 29, 29);
+  color: rgb(77, 160, 60);
+  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: flex-end;
   padding-right: 1rem;
+  cursor: pointer;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import styles from "./Main.module.scss";
 import PlainLink from "../Links/PlainLink";
 import Card from "../Cards/Card";
@@ -7,10 +7,25 @@ import Vocabulary from "../Vocabulary/Vocabulary";
 import themePink from "../../commonStyles/themes/themePink.module.scss";
 import themeBlue from "../../commonStyles/themes/themeBlue.module.scss";
 import themeGreen from "../../commonStyles/themes/themeGreen.module.scss";
+import { terms } from "../../terms";
 
 export default function Main() {
-  const terms = ["ups", "i", "did", "it", "again"];
   const themes = [themePink, themeBlue, themeGreen];
+
+  const [currentTerm, setCurrentTerm] = useState(
+    terms[Math.floor(Math.random() * terms.length)]
+  );
+
+  let [translated, setTranslated] = useState(false);
+
+  const handleTranslation = () => {
+    setTranslated(!translated);
+  };
+
+  const handleNewWord = () => {
+    setCurrentTerm(terms[Math.floor(Math.random() * terms.length)]);
+    setTranslated((translated = false));
+  };
 
   return (
     <main className={styles.main}>
@@ -21,26 +36,29 @@ export default function Main() {
               <Card
                 id="currentCard"
                 className={styles.card}
-                term={terms[Math.floor(Math.random() * 5)]}
+                term={currentTerm}
+                handleNewWord={handleNewWord}
+                translated={translated}
+                handleTranslation={handleTranslation}
               />
             </div>
 
             <div className={styles.cardsContainer__cardsBox}>
               <CardBox
                 id="dontKnowCardBox"
-                term={terms[Math.floor(Math.random() * 5)]}
+                term={terms[0].english}
                 cardHolderContents="Don't Know"
                 theme={themes[0]}
               />
               <CardBox
                 id="remainingCardBox"
-                term={terms[Math.floor(Math.random() * 5)]}
+                term={terms[2].english}
                 cardHolderContents="Remaining Cards"
                 theme={themes[1]}
               />
               <CardBox
                 id="knowCardBox"
-                term={terms[Math.floor(Math.random() * 5)]}
+                term={terms[5].english}
                 cardHolderContents="Know"
                 theme={themes[2]}
               />

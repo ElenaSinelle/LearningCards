@@ -6,7 +6,7 @@ import themePink from "../../commonStyles/themes/themePink.module.scss";
 import themeBlue from "../../commonStyles/themes/themeBlue.module.scss";
 import themeGreen from "../../commonStyles/themes/themeGreen.module.scss";
 
-export default function VocabItem({ word }) {
+export default function VocabItem({ term }) {
   const [editing, setEditing] = useState(false);
   const themes = [themePink, themeBlue, themeGreen];
 
@@ -14,17 +14,17 @@ export default function VocabItem({ word }) {
     <div className={styles.vocab__line}>
       {editing ? (
         <WordInput
-          id={word.id}
-          english={word.english}
-          transcription={word.transcription}
-          russian={word.russian}
+          id={term.id}
+          english={term.english}
+          transcription={term.transcription}
+          russian={term.russian}
         />
       ) : (
         <WordPlain
-          id={word.id}
-          english={word.english}
-          transcription={word.transcription}
-          russian={word.russian}
+          id={term.id}
+          english={term.english}
+          transcription={term.transcription}
+          russian={term.russian}
         />
       )}
       <div className={styles.vocab__btnsContainer}>

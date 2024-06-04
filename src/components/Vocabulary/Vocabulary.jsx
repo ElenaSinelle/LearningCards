@@ -1,5 +1,5 @@
 import styles from "./Vocabulary.module.scss";
-import { words } from "../../words";
+import { terms } from "../../terms";
 import VocabItem from "./VocabItem";
 import VocabHeader from "./VocabHeader";
 
@@ -10,8 +10,8 @@ export default function Vocabulary() {
       <h3 className={styles.vocab__title2}>Vocabulary Variants</h3>
       <div className={styles.vocab__container}>
         <VocabHeader />
-        {words.map((word) => (
-          <VocabItem key={word.id} word={word} />
+        {terms.map((term) => (
+          <VocabItem key={term.id} term={term} />
         ))}
       </div>
     </div>
