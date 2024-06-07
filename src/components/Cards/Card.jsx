@@ -7,7 +7,7 @@ export default function Card({
   handleNewWord,
   translated,
   handleTranslation,
-  id = "",
+  id,
 }) {
   return (
     <div id={id} className={styles.card}>
