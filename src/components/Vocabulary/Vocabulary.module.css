@@ -16,7 +16,7 @@
 }
 .vocab__line {
   display: grid;
-  grid-template-columns: repeat(3, 1fr) 1.3fr;
+  grid-template-columns: 3fr 1.3fr;
   padding: 0.3rem;
 }
 .vocab__line:nth-child(2n) {
@@ -25,13 +25,14 @@
 .vocab__line:nth-child(2n+1) {
   background-color: rgba(126, 131, 136, 0.3);
 }
-.vocab__headerItem {
-  font-weight: 700;
-}
-.vocab__item {
-  display: flex;
+.vocab__itemContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   padding: 0.3rem;
+}
+.vocab__headerItem {
+  font-weight: 700;
 }
 .vocab__btnsContainer {
   display: flex;

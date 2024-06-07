@@ -8,6 +8,7 @@ import themePink from "../../commonStyles/themes/themePink.module.scss";
 import themeBlue from "../../commonStyles/themes/themeBlue.module.scss";
 import themeGreen from "../../commonStyles/themes/themeGreen.module.scss";
 import { terms } from "../../terms";
+import { Context } from "../../Context";
 
 export default function Main() {
   const themes = [themePink, themeBlue, themeGreen];
@@ -93,9 +94,9 @@ export default function Main() {
 
             <div className={styles.timer}>timer</div>
           </div>
-          <div className={styles.vocabulary}>
-            <Vocabulary />
-          </div>
+          <Context>
+            <Vocabulary className={styles.vocabulary} />
+          </Context>
         </div>
       </div>
     </main>

@@ -1,9 +1,11 @@
+import React, { useContext } from "react";
 import styles from "./Vocabulary.module.scss";
-import { terms } from "../../terms";
 import VocabItem from "./VocabItem";
 import VocabHeader from "./VocabHeader";
+import { CustomContext } from "../../Context";
 
 export default function Vocabulary() {
+  const { terms } = useContext(CustomContext);
   return (
     <div className={styles.vocab}>
       <h2 className={styles.vocab__title2}>Vocabulary Help</h2>
@@ -11,7 +13,7 @@ export default function Vocabulary() {
       <div className={styles.vocab__container}>
         <VocabHeader />
         {terms.map((term) => (
-          <VocabItem key={term.id} term={term} />
+          <VocabItem key={term.english} {...term} />
         ))}
       </div>
     </div>

@@ -3,9 +3,12 @@ import styles from "./Vocabulary.module.scss";
 export default function VocabHeader() {
   return (
     <div className={styles.vocab__line}>
-      <VocabHeaderItem contents="Term" />
-      <VocabHeaderItem contents="Transcription" />
-      <VocabHeaderItem contents="Translation" />
+      <div className={styles.vocab__itemContainer}>
+        <VocabHeaderItem contents="Term" />
+        <VocabHeaderItem contents="Transcription" />
+        <VocabHeaderItem contents="Translation" />
+      </div>
+
       <VocabHeaderItem contents="" />
     </div>
   );

@@ -20,7 +20,7 @@
 
   &__line {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) 1.3fr;
+    grid-template-columns: 3fr 1.3fr;
     padding: 0.3rem;
     &:nth-child(2n) {
       background-color: rgba($grayBgColor, 0.1);
@@ -31,14 +31,15 @@
     }
   }
 
-  &__headerItem {
-    font-weight: 700;
-  }
-
-  &__item {
-    display: flex;
+  &__itemContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     padding: 0.3rem;
+  }
+
+  &__headerItem {
+    font-weight: 700;
   }
 
   &__btnsContainer {
