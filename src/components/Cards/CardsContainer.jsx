@@ -45,19 +45,19 @@ export default function CardsContainer() {
       <div className={styles.cardsContainer__cardsBox}>
         <CardBox
           id="dontKnowCardBox"
-          term={terms[0].english}
+          term="dog"
           cardHolderContents="Don't Know"
           theme={themes[0]}
         />
         <CardBox
           id="remainingCardBox"
-          term={terms[2].english}
+          term="cat"
           cardHolderContents="Remaining Cards"
           theme={themes[1]}
         />
         <CardBox
           id="knowCardBox"
-          term={terms[5].english}
+          term="house"
           cardHolderContents="Know"
           theme={themes[2]}
         />
