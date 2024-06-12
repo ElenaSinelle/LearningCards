@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
-import styles from "../Main/Main.module.scss";
-import { CustomContext } from "../../Context";
+import styles from "../../Main/Main.module.scss";
+import { CustomContext } from "../../../Context";
 
-import Card from "../Cards/Card";
-import CardBox from "../Cards/CardBox";
+import Card from "../Card/Card";
+import CardBox from "../CardBox/CardBox/CardBox";
 
-import themePink from "../../commonStyles/themes/themePink.module.scss";
-import themeBlue from "../../commonStyles/themes/themeBlue.module.scss";
-import themeGreen from "../../commonStyles/themes/themeGreen.module.scss";
+import themePink from "../../../commonStyles/themes/themePink.module.scss";
+import themeBlue from "../../../commonStyles/themes/themeBlue.module.scss";
+import themeGreen from "../../../commonStyles/themes/themeGreen.module.scss";
 
 const themes = [themePink, themeBlue, themeGreen];
 

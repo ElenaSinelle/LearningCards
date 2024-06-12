@@ -1,5 +1,5 @@
 import React from "react";
-import PlainLink from "../Links/PlainLink";
+import PlainLink from "../../Links/PlainLink/PlainLink";
 import styles from "./NavItem.module.scss";
 
 export default function NavItem({ href, contents }) {

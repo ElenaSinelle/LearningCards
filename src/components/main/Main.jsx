@@ -1,6 +1,6 @@
 import styles from "./Main.module.scss";
-import PlainLink from "../Links/PlainLink";
-import CardsContainer from "../Cards/CardsContainer";
+import PlainLink from "../Links/PlainLink/PlainLink";
+import CardsContainer from "../Cards/CardsContainer/CardsContainer";
 import Vocabulary from "../Vocabulary/Vocabulary";
 
 import { Context } from "../../Context";

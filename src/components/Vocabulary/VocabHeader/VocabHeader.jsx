@@ -1,4 +1,4 @@
-import styles from "./Vocabulary.module.scss";
+import styles from "../Vocabulary.module.scss";
 
 export default function VocabHeader() {
   return (

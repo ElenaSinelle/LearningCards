@@ -1,10 +1,10 @@
 import React from "react";
 import Logo from "../Logo/Logo";
 import PlayWare from "../../images/png/playwire.png";
-import NavItem from "./NavItem";
-import ImgLink from "../Links/ImgLink";
-import PlainLink from "../Links/PlainLink";
-import ButtonLink from "../Links/ButtonLink";
+import NavItem from "./NavItem/NavItem";
+import ImgLink from "../Links/ImgLink/ImgLink";
+import PlainLink from "../Links/PlainLink/PlainLink";
+import ButtonLink from "../Links/ButtonLink/ButtonLink";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {

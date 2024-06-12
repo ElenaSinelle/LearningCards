@@ -1,4 +1,4 @@
-import ImgLink from "../Links/ImgLink";
+import ImgLink from "../Links/ImgLink/ImgLink";
 
 export default function Search() {
   return (

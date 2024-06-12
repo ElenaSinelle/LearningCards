@@ -1,5 +1,5 @@
-import ImgLink from "../Links/ImgLink";
-import audio from "../../images/icons/audio.svg";
+import ImgLink from "../../Links/ImgLink/ImgLink";
+import audio from "../../../images/icons/audio.svg";
 import styles from "./Card.module.scss";
 
 export default function Card({

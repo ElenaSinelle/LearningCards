@@ -1,5 +1,5 @@
 import styles from "./CardBox.module.scss";
-import CardMini from "./CardMini";
+import CardMini from "../CardMini/CardMini";
 
 export default function CardBox({ id, term, cardHolderContents, theme }) {
   return (

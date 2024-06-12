@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Header.module.scss";
 import Logo from "../Logo/Logo";
-import PlainLink from "../Links/PlainLink";
+import PlainLink from "../Links/PlainLink/PlainLink";
 import Search from "../Inputs/Search";
 
 export default function Header() {
