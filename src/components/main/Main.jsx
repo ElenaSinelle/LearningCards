@@ -1,5 +1,5 @@
 import styles from "./Main.module.scss";
-import PlainLink from "../Links/PlainLink/PlainLink";
+// import PlainLink from "../Links/PlainLink/PlainLink";
 import CardsContainer from "../Cards/CardsContainer/CardsContainer";
 import Vocabulary from "../Vocabulary/Vocabulary";
 
@@ -11,10 +11,10 @@ export default function Main() {
       <div className={styles.container}>
         <div className={styles.main__wrapper}>
           <Context>
-            <div>
+            <>
               <CardsContainer />
 
-              <div className={styles.commandArea}>
+              {/* <div className={styles.commandArea}>
                 <div className={styles.commandArea__commandAreaItem}>
                   <PlainLink
                     className={styles.commandArea__link}
@@ -39,10 +39,10 @@ export default function Main() {
                     id="restartLink"
                   />
                 </div>
-              </div>
+              </div> */}
 
               <div className={styles.timer}>timer</div>
-            </div>
+            </>
 
             <Vocabulary className={styles.vocabulary} />
           </Context>

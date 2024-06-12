@@ -8,16 +8,16 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content 5fr 1fr 1.5fr;
+  grid-template-rows: 1fr 5fr 3fr;
   grid-template-areas:
     "cardTitle"
     "term"
-    "translation"
-    "clickToFlip";
+    "translation";
 
   &__cardTitle {
     grid-area: cardTitle;
     text-align: center;
+    padding-top: 0.7rem;
   }
 
   &__readCardBtn {
@@ -38,12 +38,13 @@
   &__showTranslation {
     grid-area: translation;
     @include flexAlignment;
+    height: min-content;
     justify-self: center;
     max-width: 60%;
     font-size: 1rem;
     font-weight: 500;
     outline: none;
-    padding: 0.2rem 1rem;
+    padding: 0.7rem 1.5rem;
     cursor: pointer;
     border: 1px solid $darkGreenColor;
     border-radius: 0.2rem;
@@ -52,7 +53,7 @@
 
     &:hover,
     &:active {
-      transform: scale(0.97);
+      transform: $transformScale;
     }
   }
 
@@ -62,15 +63,7 @@
     justify-self: center;
     max-width: 60%;
     font-size: 1.2rem;
-  }
-
-  &__clickToFlip {
-    grid-area: clickToFlip;
-    color: $darkGreenColor;
-    font-weight: 700;
-    @include flexAlignment;
-    justify-content: flex-end;
-    padding-right: 1rem;
-    cursor: pointer;
+    height: min-content;
+    padding-top: 0.7rem;
   }
 }

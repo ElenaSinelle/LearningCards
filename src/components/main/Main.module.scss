@@ -7,22 +7,6 @@
     background-color: $lightFontColor;
     padding: 2rem 3rem;
 
-    .cardsContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-
-      &__currentCardContainer {
-        @include flexAlignment;
-      }
-
-      &__cardsBox {
-        @include flexAlignment;
-        justify-content: space-between;
-        gap: 2rem;
-      }
-    }
-
     .commandArea {
       display: flex;
       justify-content: space-between;
@@ -46,6 +30,7 @@
     }
     .timer {
       text-align: end;
+      padding-bottom: 2rem;
     }
   }
 }

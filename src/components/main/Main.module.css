@@ -5,23 +5,6 @@
   background-color: rgb(255, 255, 255);
   padding: 2rem 3rem;
 }
-.main__wrapper .cardsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.main__wrapper .cardsContainer__currentCardContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.main__wrapper .cardsContainer__cardsBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
 .main__wrapper .commandArea {
   display: flex;
   justify-content: space-between;
@@ -42,6 +25,7 @@
 }
 .main__wrapper .timer {
   text-align: end;
+  padding-bottom: 2rem;
 }
 
 .container {

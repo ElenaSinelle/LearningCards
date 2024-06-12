@@ -1,14 +1,9 @@
 import ImgLink from "../../Links/ImgLink/ImgLink";
 import audio from "../../../images/icons/audio.svg";
+
 import styles from "./Card.module.scss";
 
-export default function Card({
-  term,
-  handleNewWord,
-  translated,
-  handleTranslation,
-  id,
-}) {
+export default function Card({ term, translated, handleTranslation, id }) {
   return (
     <div id={id} className={styles.card}>
       <h4 className={styles.card__cardTitle}>Term</h4>
@@ -31,10 +26,6 @@ export default function Card({
       ) : (
         <div className={styles.card__translation}>{term.russian}</div>
       )}
-
-      <div className={styles.card__clickToFlip} onClick={handleNewWord}>
-        click for new word
-      </div>
     </div>
   );
 }
