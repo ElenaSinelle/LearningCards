@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/LearningCards/static/css/main.55028241.css",
-    "main.js": "/LearningCards/static/js/main.88d8f740.js",
+    "main.js": "/LearningCards/static/js/main.1870d7c4.js",
     "static/media/Lato-Italic.eot": "/LearningCards/static/media/Lato-Italic.fd71a75b79c4b1ed7053.eot",
     "static/media/Lato-Regular.eot": "/LearningCards/static/media/Lato-Regular.422c97520c3b637a7749.eot",
     "static/media/Lato-Light.ttf": "/LearningCards/static/media/Lato-Light.c7400fcad9e48ca9043f.ttf",
@@ -19,10 +19,10 @@
     "static/media/audio.svg": "/LearningCards/static/media/audio.fc70d8d5b02aabe077e0e7bc13988721.svg",
     "index.html": "/LearningCards/index.html",
     "main.55028241.css.map": "/LearningCards/static/css/main.55028241.css.map",
-    "main.88d8f740.js.map": "/LearningCards/static/js/main.88d8f740.js.map"
+    "main.1870d7c4.js.map": "/LearningCards/static/js/main.1870d7c4.js.map"
   },
   "entrypoints": [
     "static/css/main.55028241.css",
-    "static/js/main.88d8f740.js"
+    "static/js/main.1870d7c4.js"
   ]
 }
