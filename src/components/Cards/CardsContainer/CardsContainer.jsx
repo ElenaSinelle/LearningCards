@@ -14,31 +14,19 @@ const themes = [themePink, themeBlue, themeGreen];
 
 export default function CardsContainer() {
   const { terms } = useContext(CustomContext);
-  // const terms = []; // checkup for an empty array
-
   const [currentTerm, setCurrentTerm] = useState(0);
-  const term = terms[currentTerm];
-  const [translated, setTranslated] = useState(false);
-
-  const handleTranslation = () => setTranslated(true);
 
   const handleNextWord = () => {
     setCurrentTerm((prev) => (prev === terms.length - 1 ? 0 : prev + 1));
-    setTranslated(false);
   };
 
   const handlePrevWord = () => {
     setCurrentTerm((prev) => (prev === 0 ? terms.length - 1 : prev - 1));
-    setTranslated(false);
   };
 
   const errorMessageRender = (
     <div className={styles.errorMessage}>No terms available</div>
   );
-
-  useEffect(() => {
-    setTranslated(false);
-  }, [currentTerm]);
 
   return (
     <div className={styles.cardsContainer}>
@@ -48,23 +36,24 @@ export default function CardsContainer() {
           onClick={handlePrevWord}
           contents="Previous Word"
         />
-        {!terms || terms.length === 0 ? (
-          errorMessageRender
-        ) : (
-          <Card
-            id={term.english}
-            className={styles.cardsContainer__card}
-            term={term}
-            translated={translated}
-            handleTranslation={handleTranslation}
-          />
-        )}
+        {!terms || terms.length === 0
+          ? errorMessageRender
+          : terms.map((term, index) => (
+              <Card
+                key={term.english}
+                id={term.english}
+                className={`${styles.cardsContainer__card} ${
+                  index === currentTerm ? styles.currentCard : ""
+                }`}
+                term={term}
+                isVisible={index === currentTerm}
+              />
+            ))}
         <PgntnButton
           className={styles.cardsContainer__next}
           onClick={handleNextWord}
           contents="Next Word"
         />
-
         <div className={styles.cardsContainer__pagination}>
           Current Word:{" "}
           <span className={styles.cardsContainer__pagination_num}>
